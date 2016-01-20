@@ -47,8 +47,8 @@ ADD set_root_pw.sh /root/set_root_pw.sh
 ADD run.sh /root/run.sh
 RUN chmod +x /root/*.sh
 
-EXPOSE 80
-EXPOSE 22
+# EXPOSE 80
+# EXPOSE 22
 
 RUN mysql --version
 RUN php --version
@@ -56,4 +56,4 @@ RUN node --version
 RUN git --version
 
 # CMD ["/bin/bash", "/start.sh"]
-CMD ["/root/run.sh"]
+# CMD ["/root/run.sh"]
