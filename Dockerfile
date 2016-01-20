@@ -43,17 +43,17 @@ RUN echo %sudo  ALL=NOPASSWD: ALL >> /etc/sudoers
 
 
 # set root password
-ADD set_root_pw.sh /root/set_root_pw.sh
-ADD run.sh /root/run.sh
+#ADD set_root_pw.sh /root/set_root_pw.sh
+##ADD run.sh /root/run.sh
 RUN chmod +x /root/*.sh
 
 # EXPOSE 80
 # EXPOSE 22
 
-RUN mysql --version
-RUN php --version
-RUN node --version
-RUN git --version
+#RUN mysql --version
+#RUN php --version
+#RUN node --version
+#RUN git --version
 
 # CMD ["/bin/bash", "/start.sh"]
 # CMD ["/root/run.sh"]
