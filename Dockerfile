@@ -48,7 +48,7 @@ RUN echo %sudo  ALL=NOPASSWD: ALL >> /etc/sudoers
 # RUN chmod +x /root/*.sh
 
 # EXPOSE 80
-# EXPOSE 22
+
 
 #RUN mysql --version
 #RUN php --version
@@ -58,6 +58,7 @@ RUN echo %sudo  ALL=NOPASSWD: ALL >> /etc/sudoers
 # CMD ["/bin/bash", "/start.sh"]
 # CMD ["/root/run.sh"]
 
+#EXPOSE 22
 EXPOSE 80
 
-CMD [ "/usr/sbin/nginx" ]
+CMD ["nginx", "-g", "daemon off;"]
