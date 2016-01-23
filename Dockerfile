@@ -57,3 +57,7 @@ RUN echo %sudo  ALL=NOPASSWD: ALL >> /etc/sudoers
 
 # CMD ["/bin/bash", "/start.sh"]
 # CMD ["/root/run.sh"]
+
+EXPOSE 80
+
+CMD [ "/usr/sbin/nginx" ]
